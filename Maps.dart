@@ -56,7 +56,7 @@ void main() {
   // print(map.containsValue('2'));
   // print(map.containsValue(5));
 
-  var myMap = {'key1': 'value1', 'key2': 'value2'};
+  // var myMap = {'key1': 'value1', 'key2': 'value2'};
   //putIfAbsent()
   // myMap.putIfAbsent('key3', () => 'value3');
   // myMap.putIfAbsent('key3', () => 'value3');
@@ -64,7 +64,42 @@ void main() {
   // print(myMap);
 
   //remove()
-  print(myMap.remove('key1'));
-  print(myMap.remove('key3'));
-  print(myMap);
+  // print(myMap.remove('key1'));
+  // print(myMap.remove('key3'));
+  // print(myMap);
+
+  Map<String, int> mymap1 = {'key1': 2, 'key2': 5};
+  print(mymap1);
+
+  Map<String, List<int>> mymap2 = {
+    'key1': [1, 2, 3, 4],
+    'key2': [10, 20, 30]
+  };
+  print(mymap2);
+  print(mymap2['key1']);
+  print((mymap2['key1'] as List<int>)[0]);
+
+  Map<String, dynamic> mymap3 = {'key1': 2, 'key2': 'valu2'};
+  var name = mymap3['key1'] as int;
+
+  print(name);
+
+  //// Very Important
+  int? x = null;
+  print(x?.isEven);
+
+  int? y;
+  if (y == null) {
+    print('null');
+  } else {
+    print(y);
+  }
+
+  Map<String, dynamic> mymap4 = {'key1': 2, 'key2': 'valu2'};
+  var weight = mymap4['weight'];
+  if (weight == null) {
+    print('null');
+  } else {
+    print(weight);
+  }
 }
